@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2vw;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            height: 40%;
+            width: 50%;
+            background-color: rgb(0, 174, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+
+    <script>
+
+        var body=document.querySelector("body");
+
+        var div=document.createElement("div");
+        div.setAttribute('id','container');
+
+        var para=document.createElement("p");
+        para.textContent="Hello,DOM!";
+        para.style.color="blue";
+
+        div.appendChild(para);
+
+
+        var button=document.createElement("button");
+        button.textContent="Click Me";
+
+
+        body.appendChild(button);
+
+        button.addEventListener('click',()=>{
+            container.style.backgroundColor="yellow";
+            alert("Button Clicked...!!!")
+        })
+        
+        body.appendChild(div);
+
+    </script>
+</body>
+</html>
